@@ -1,0 +1,36 @@
+//Color
+$white: #FFFFFF;
+$black: #000000;
+$sable: #060606;
+$charcoal: #2E1503;
+$tangerine: #FFAF6D;
+$orange: #FFA500;
+
+//Tipografía
+$poppins: 'Poppins', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+$regular: 400;
+$bold: 700;
+
+//Breakpoints
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+
+$breakpoints-down: (
+    'xs': (max-width: $min-sm),
+    'sm': (min-width: $min-sm),
+    'md': (min-width: $min-md),
+    'lg': (min-width: $min-lg),
+    'xl': (min-width: $min-xl)
+);
+
+$breakpoints-up: (
+    'xs': (max-width: $min-sm),
+    'sm': (max-width: $min-md),
+    'md': (max-width: $min-lg),
+    'lg': (max-width: $min-xl),
+    'xl': (min-width: $min-xl)
+);

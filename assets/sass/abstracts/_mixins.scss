@@ -1,0 +1,30 @@
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to-down($breakpoint) {
+    $raw-query: map-get($breakpoints-down, $breakpoint);
+  
+    @if map-has-key($breakpoints-down, $breakpoint) {
+        @media #{inspect(map-get($breakpoints-down, $breakpoint))} {
+            @content;
+        }
+    } @else {
+        @error 'No se encontró un valor para `#{$breakpoint}`. '
+        + 'Por favor verifica que esté creado en el parcial variables `$breakpoints` map.';
+    }
+}
+
+
+@mixin respond-to-up($breakpoint) {
+    $raw-query: map-get($breakpoints-up, $breakpoint);
+  
+    @if map-has-key($breakpoints-up, $breakpoint) {
+        @media #{inspect(map-get($breakpoints-up, $breakpoint))} {
+            @content;
+        }
+    } @else {
+        @error 'No se encontró un valor para `#{$breakpoint}`. '
+        + 'Por favor verifica que esté creado en el parcial variables `$breakpoints` map.';
+    }
+}

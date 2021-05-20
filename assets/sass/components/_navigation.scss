@@ -1,0 +1,86 @@
+.navigation {
+    position: relative;
+    padding: 0 1.5rem;
+}
+.navigation__logo {
+    width: 80px;
+    position: relative;
+    padding: .8rem 0;
+    text-align: center;
+    background-color: $black;
+    @include respond-to-down('md'){
+        width: 50px;
+        padding: 1.3rem 0;
+    }
+    & object {
+        max-width: 100%;
+    }
+}
+
+.collapsible {
+    text-align: right;
+    color: $white;
+    @include respond-to-down('md'){
+        display: none;
+    }
+    label {
+        display: block;
+        padding: 2.4rem 1.5rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+
+#menu{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#menu:checked ~ .navigation__container {
+    max-height: 100%;
+}
+
+.navigation__container {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    @include respond-to-down('md'){
+        min-height: 100%;
+        padding: .75rem 1rem .75rem 0;
+        overflow: visible;
+    }
+}
+
+.navigation__list {
+    list-style-type: none;
+    margin:0;
+    padding-left: 0;
+    padding-right: 2rem;
+    @include respond-to-down('md'){
+        display: flex;
+        justify-content: flex-end;
+        padding: inherit;
+        margin: inherit;
+    }
+}
+
+.navigation__item{
+    a {
+        display: block;
+        text-align: right;
+        padding: .8rem;
+        font-family: $poppins;
+        text-decoration: none;
+        color: $white;
+        font-weight: $bold;
+        @include respond-to-down('sm'){
+            padding: .9rem 1rem;
+            font-size: 1rem;
+        }
+        &:hover{
+            color: $white;
+        }
+    }
+}
