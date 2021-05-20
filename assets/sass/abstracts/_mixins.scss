@@ -28,3 +28,8 @@
         + 'Por favor verifica que esté creado en el parcial variables `$breakpoints` map.';
     }
 }
+
+@mixin relative-converter($property, $unit, $target, $context){
+    $result: ($target / $context);
+    #{$property}: #{$result + $unit};
+}

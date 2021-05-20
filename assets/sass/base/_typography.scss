@@ -1,0 +1,16 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, address, cite, del, em, img, s,
+small, strike, strong, sub, sup,
+b, u, i, center, ol, ul, li,
+fieldset, form, label,
+table, tbody, thead, tr, th, td,
+article, aside, footer, header, 
+menu, nav, section{
+    font-family: $ubuntu;
+}
+
+html, body, div, span, iframe, p, center, ol, ul, li{
+    font-weight: $regular;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $bold;
+}

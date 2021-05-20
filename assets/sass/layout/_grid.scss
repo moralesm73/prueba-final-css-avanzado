@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     @include respond-to-down('lg'){width: 960px;}
+    @include respond-to-down('xl'){width: 1150px;}
 }
 
 

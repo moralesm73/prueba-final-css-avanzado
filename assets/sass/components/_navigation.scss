@@ -12,7 +12,7 @@
         width: 50px;
         padding: 1.3rem 0;
     }
-    & object {
+    & .navigation__image {
         max-width: 100%;
     }
 }
@@ -28,6 +28,12 @@
         padding: 2.4rem 1.5rem;
         font-size: 1.8rem;
         cursor: pointer;
+    }
+    &:hover {
+        color: $orange;
+    }
+    &:focus {
+        color: $orange;
     }
 }
 
@@ -79,8 +85,12 @@
             padding: .9rem 1rem;
             font-size: 1rem;
         }
-        &:hover{
-            color: $white;
+        &:hover {
+            color: $orange;
+        }
+        &:focus {
+            color: $orange;
+            border-bottom: 2px solid $orange;
         }
     }
 }
