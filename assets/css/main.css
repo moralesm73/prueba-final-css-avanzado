@@ -403,6 +403,55 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.footer {
+  background-color: #000000;
+  padding: 1.5rem 3rem;
+}
+@media (min-width: 992px) {
+  .footer {
+    padding: 1rem;
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+}
+@media (min-width: 992px) {
+  .footer__copyright {
+    font-size: 1.0769230769rem;
+    margin-bottom: 0;
+    padding: 1rem 1.2rem;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .footer__menu {
+    flex-direction: row;
+  }
+}
+
+.footer__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+@media (min-width: 992px) {
+  .footer__link {
+    padding: 1rem;
+    font-size: 1.0769230769rem;
+  }
+}
+
 .header {
   background-color: #000000;
 }
@@ -444,6 +493,64 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
+.form__submit {
+  border-radius: 5px;
+  border: 1px solid #FFAF6D;
+  background-color: #FFAF6D;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #000000;
+  padding: 0.3rem 0.5rem;
+}
+@media (min-width: 992px) {
+  .form__submit {
+    font-size: 1.0769230769rem;
+  }
+}
+.form__submit:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+.form__submit:focus {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+@media (min-width: 992px) {
+  .form {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.form__input {
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
+  width: 180px;
+  margin-bottom: 5px;
+  font-size: 0.875rem;
+  color: #000000;
+  padding: 0.3rem 0.5rem;
+  background-color: #FFFFFF;
+}
+@media (min-width: 992px) {
+  .form__input {
+    font-size: 1.0769230769rem;
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+.form__input:focus {
+  background-color: #FFAF6D;
+}
+
 .navigation {
   position: relative;
   padding: 0 1.5rem;

@@ -1,0 +1,18 @@
+.form__input {
+    border-radius: 5px;
+    border:1px solid $gray;
+    width: 180px;
+    margin-bottom: 5px;
+    @include relative-converter(font-size,rem,$small,16);
+    @include respond-to-down('lg'){
+        @include relative-converter(font-size,rem,$small,13);
+        margin-bottom: 0;
+        margin-right: 5px;
+    }
+    color: $black;
+    padding: .3rem .5rem;
+    background-color: $white;
+    &:focus {
+        background-color: $tangerine;
+    }
+}

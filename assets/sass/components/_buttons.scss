@@ -1,0 +1,20 @@
+.form__submit {
+    border-radius: 5px;
+    border:1px solid $tangerine;
+    background-color: $tangerine;
+    cursor: pointer;
+    @include relative-converter(font-size,rem,$small,16);
+    @include respond-to-down('lg'){
+        @include relative-converter(font-size,rem,$small,13);
+    }
+    color: $black;
+    padding: .3rem .5rem;
+    &:hover {
+        background-color: $white;
+        border:1px solid $white;
+    }
+    &:focus {
+        background-color: $white;
+        border:1px solid $white;
+    }
+}

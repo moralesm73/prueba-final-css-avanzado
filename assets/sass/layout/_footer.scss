@@ -1,0 +1,40 @@
+.footer {
+    background-color: $black;
+    padding: 1.5rem 3rem;
+    @include respond-to-down('lg'){
+        padding: 1rem;
+    }
+}
+
+.footer__copyright {
+    text-align: center;
+    @include relative-converter(font-size,rem,$small,16);
+    margin-bottom: 2rem;
+    @include respond-to-down('lg'){
+        @include relative-converter(font-size,rem,$small,13);
+        margin-bottom: 0;
+        padding: 1rem 1.2rem;
+    }
+    color: $white;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include respond-to-down('lg'){
+        flex-direction: row;
+    }
+}
+
+.footer__link {
+    color: $white;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    @include relative-converter(font-size,rem,$small,16);
+    @include respond-to-down('lg'){
+        padding: 1rem;
+        @include relative-converter(font-size,rem,$small,13);
+    }
+}
