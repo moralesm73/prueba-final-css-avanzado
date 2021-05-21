@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+html,body {
+	overflow-x: hidden;
+    @include respond-to-down('sm'){
+        overflow-x: auto;
+    }
+}
+
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

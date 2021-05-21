@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+@media (min-width: 576px) {
+  html, body {
+    overflow-x: auto;
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -410,6 +419,31 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+@keyframes mover {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 30%;
+  }
+}
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .navigation {
   position: relative;
   padding: 0 1.5rem;
@@ -634,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-us__list {
   list-style: circle;
   padding-left: 1.1rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 .about-us__links {
@@ -646,6 +680,77 @@ h1, h2, h3, h4, h5, h6 {
   .about-us__links {
     font-size: 1.2307692308rem;
   }
+}
+
+.svg-content {
+  position: relative;
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .svg-content {
+    max-width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .svg-content {
+    max-width: 400px;
+  }
+}
+
+.svg-content__background {
+  display: block;
+  width: 100%;
+}
+
+.svg-content__code {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.svg-content__code--animation {
+  animation-name: mover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: alternate;
+}
+
+.svg-content__engine {
+  display: block;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+@media (min-width: 576px) {
+  .svg-content__engine {
+    bottom: 7%;
+  }
+}
+@media (min-width: 768px) {
+  .svg-content__engine {
+    bottom: 0;
+  }
+}
+.svg-content__engine--animation {
+  animation-name: girar;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+}
+
+.svg-content__border {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

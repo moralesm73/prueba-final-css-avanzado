@@ -106,7 +106,7 @@
 .about-us__list {
     list-style: circle;
     padding-left: 1.1rem;
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
 
 .about-us__links {
@@ -116,4 +116,64 @@
     @include respond-to-down('lg'){
         @include relative-converter(font-size,rem,$medium,13);
     }
+}
+
+.svg-content {
+    position: relative;
+    width: 90%;
+    max-width: 200px;
+    margin: 0 auto;
+    @include respond-to-down('sm'){
+        max-width: 300px;
+    }
+    @include respond-to-down('md'){
+        max-width: 400px;
+    }
+}
+
+.svg-content__background {
+    display: block;
+    width: 100%;
+}
+.svg-content__code {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    &--animation {
+        animation-name: mover;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-direction: alternate;
+    }
+}
+.svg-content__engine {
+    display: block;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    @include respond-to-down('sm'){
+        bottom: 7%;
+    }
+    @include respond-to-down('md'){
+        bottom: 0;
+    }
+    &--animation {
+        animation-name: girar;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-direction:normal;
+    }
+}
+.svg-content__border {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
